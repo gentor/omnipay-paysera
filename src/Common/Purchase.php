@@ -37,6 +37,7 @@ class Purchase
     protected static function parameters(PurchaseRequest $request)
     {
         return [
+            'developerid' => $request->getDeveloperId(),
             'projectid' => $request->getProjectId(),
             'orderid' => $request->getTransactionId(),
             'accepturl' => $request->getReturnUrl(),

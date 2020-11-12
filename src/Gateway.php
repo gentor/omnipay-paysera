@@ -33,6 +33,27 @@ class Gateway extends AbstractGateway
     }
 
     /**
+     * Get the Developer ID.
+     *
+     * @return string
+     */
+    public function getDeveloperId()
+    {
+        return $this->getParameter('developerId');
+    }
+
+    /**
+     * Set the Developer ID.
+     *
+     * @param  string  $value
+     * @return $this
+     */
+    public function setDeveloperId($value)
+    {
+        return $this->setParameter('developerId', $value);
+    }
+
+    /**
      * Get the Project ID.
      *
      * @return string

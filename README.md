@@ -14,10 +14,10 @@
 
 ## Installation
 
-Omnipay is installed via [Composer](http://getcomposer.org/). To install, require `league/omnipay` and `semyonchetvertnyh/omnipay-paysera` with Composer:
+Omnipay is installed via [Composer](http://getcomposer.org/). To install, require `league/omnipay` and `gentor/omnipay-paysera` with Composer:
 
 ```bash
-composer require league/omnipay semyonchetvertnyh/omnipay-paysera
+composer require league/omnipay gentor/omnipay-paysera
 ```
 
 For general usage instructions, please see the main [Omnipay](https://github.com/thephpleague/omnipay) repository.
@@ -45,6 +45,7 @@ use Omnipay\Omnipay;
 $gateway = Omnipay::create('Paysera');
 $gateway->setProjectId('123456');
 $gateway->setPassword('abcde12345');
+$gateway->setDeveloperId(123456);
 
 // Optionally to determine which order has been paid
 $orderId = 1;
